@@ -1,4 +1,5 @@
 import React from "react";
+import { Text, Platform } from "react-native";
 import { createStackNavigator } from "react-navigation-stack";
 import { createBottomTabNavigator } from "react-navigation-tabs";
 import { createDrawerNavigator } from "react-navigation-drawer";
@@ -12,8 +13,6 @@ import MealDetailScreen from "../screens/MealDetailScreen";
 import Colors from "../constants/Colors";
 import FavoritesScreen from "../screens/FavouritesScreen";
 import FilterScreen from "../screens/FilterScreen";
-
-import { Text, Platform } from "react-native";
 
 const defaultStackNavOptions = {
   headerStyle: {
@@ -117,6 +116,7 @@ const MealsFavTabNavigator =
           activeTintColor: Colors.accentColor,
         },
       });
+
 const MainNavigator = createDrawerNavigator(
   {
     MealFavs: {
